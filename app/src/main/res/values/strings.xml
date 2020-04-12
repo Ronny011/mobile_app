@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Phone data</string>
+    <string name="button">Share</string>
+    <string name="your_name">Your name</string>
+    <string name="your_phone">Your Phone</string>
+    <string name="batt_per">Battery percentage</string>
+</resources>
