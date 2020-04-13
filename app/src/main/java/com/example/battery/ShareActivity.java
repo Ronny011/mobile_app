@@ -16,11 +16,11 @@ public class ShareActivity extends AppCompatActivity {
         setContentView(R.layout.activity_share);
         status = findViewById(R.id.status);
         icon = findViewById(R.id.icon);
-        if (batt >= 1 && batt <= 29)
-            status.setText("Low");
-        else if (batt >= 30 && batt <= 74)
-            status.setText("Medium");
-        else if (batt >= 75 && batt <= 100)
-            status.setText("High");
-    }
-}
+//        if (batt >= 1 && batt <= 29)
+//            status.setText("Low");
+//        else if (batt >= 30 && batt <= 74)
+//            status.setText("Medium");
+//        else if (batt >= 75 && batt <= 100)
+//            status.setText("High");
+//    }
+}}
