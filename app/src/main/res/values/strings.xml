@@ -4,4 +4,6 @@
     <string name="your_name">Your name</string>
     <string name="your_phone">Your Phone</string>
     <string name="batt_per">Battery percentage</string>
+    <string name="status">status</string>
+    <string name="emoji_for_status_text">Emoji for status text</string>
 </resources>

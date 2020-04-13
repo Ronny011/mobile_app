@@ -14,13 +14,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        share = (findViewById(R.id.button));//button element
+        share = findViewById(R.id.button);//button element
         share.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, ShareActivity.class);
-        startActivity(intent);
+        startActivity(intent);//goes to second activity on click
     }
 }

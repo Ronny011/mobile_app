@@ -8,7 +8,7 @@
     tools:context=".ShareActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/status"
         android:layout_width="143dp"
         android:layout_height="71dp"
         android:layout_marginStart="40dp"
@@ -17,16 +17,16 @@
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
         android:layout_marginBottom="363dp"
-        android:text="status"
+        android:text="@string/status"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/icon"
         android:layout_width="182dp"
         android:layout_height="205dp"
         android:layout_marginStart="42dp"
@@ -35,9 +35,10 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="298dp"
+        android:contentDescription="@string/emoji_for_status_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/status"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:mipmap/sym_def_app_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
