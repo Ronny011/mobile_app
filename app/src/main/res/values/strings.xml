@@ -6,4 +6,7 @@
     <string name="batt_per">Battery percentage</string>
     <string name="status">status</string>
     <string name="emoji_for_status_text">Emoji for status text</string>
+    <string name="low">low</string>
+    <string name="medium">medium</string>
+    <string name="high">high</string>
 </resources>
