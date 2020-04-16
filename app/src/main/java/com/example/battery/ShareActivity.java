@@ -9,8 +9,7 @@ import android.widget.TextView;
 public class ShareActivity extends AppCompatActivity {
     TextView status;//low/medium/high
     ImageView icon;//emojis
-    String percentage;
-    TextView prints;
+    int percentage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +17,15 @@ public class ShareActivity extends AppCompatActivity {
         setContentView(R.layout.activity_share);
         status = findViewById(R.id.status);
         icon = findViewById(R.id.icon);
-        status.setText("noob");
         Intent intent = getIntent();
-        percentage = intent.getExtras().getString("percentage");
-//        prints.setText(percentage);
-            }
-        };
-//        if (percentage >= 1 && percentage <= 29)
-//            status.setText("Low");
-//        else if (percentage >= 30 && percentage <= 74)
-//            status.setText("Medium");
-//        else if (percentage >= 75 && percentage <= 100)
-//            status.setText("High");
-//    }
-//}
+        percentage = intent.getIntExtra("percentage", 0);
+        System.out.println(percentage);
+        if (percentage >= 1 && percentage <= 29)
+            status.setText("Low");
+        else if (percentage >= 30 && percentage <= 74)
+            status.setText("Medium");
+        else if (percentage >= 75 && percentage <= 100)
+            status.setText("High");
+    }
+}
+

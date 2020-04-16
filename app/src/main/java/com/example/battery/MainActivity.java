@@ -47,10 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        String ppp = String.valueOf(pct);
-        Intent intent2 = new Intent(this, ShareActivity.class);
-        intent2.putExtra("percentage", ppp);
-        startActivity(intent2);//goes to second activity on click
+        Intent share = new Intent(this, ShareActivity.class);
+        share.putExtra("percentage", pct);
+        startActivity(share);//goes to second activity on click
     }
 }
 
