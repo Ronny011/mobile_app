@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorButton">#00A030</color>
-    <color name="colorShare">#CD0041</color>
+    <color name="colorShare">#FFFFFF</color>
+    <color name="edit">#E4E4E4</color>
+    <color name="border">#A3A3A3</color>
 </resources>

@@ -1,7 +1,7 @@
 package com.example.battery;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 public class ShareActivity extends AppCompatActivity {
     TextView status;//low/medium/high
     ImageView icon;//emojis
+    String percentage;
+    TextView prints;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +18,17 @@ public class ShareActivity extends AppCompatActivity {
         setContentView(R.layout.activity_share);
         status = findViewById(R.id.status);
         icon = findViewById(R.id.icon);
-//        if (batt >= 1 && batt <= 29)
+        status.setText("noob");
+        Intent intent = getIntent();
+        percentage = intent.getExtras().getString("percentage");
+//        prints.setText(percentage);
+            }
+        };
+//        if (percentage >= 1 && percentage <= 29)
 //            status.setText("Low");
-//        else if (batt >= 30 && batt <= 74)
+//        else if (percentage >= 30 && percentage <= 74)
 //            status.setText("Medium");
-//        else if (batt >= 75 && batt <= 100)
+//        else if (percentage >= 75 && percentage <= 100)
 //            status.setText("High");
 //    }
-}}
+//}

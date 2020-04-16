@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button share;
     TextView battMessage;
     BroadcastReceiver battBroadcast;
+    int pct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +23,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         share = findViewById(R.id.button);//button element
         share.setOnClickListener(this);
-        battMessage = findViewById(R.id.textView2);
+        battMessage = findViewById(R.id.battBox);
         battBroadcast = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                int pct = intent.getIntExtra("level",0);
+                pct = intent.getIntExtra("level",0);
                 battMessage.setText("Battery percentage " + String.valueOf(pct) + "%");
             }
         };
@@ -46,8 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, ShareActivity.class);
-        startActivity(intent);//goes to second activity on click
+        String ppp = String.valueOf(pct);
+        Intent intent2 = new Intent(this, ShareActivity.class);
+        intent2.putExtra("percentage", ppp);
+        startActivity(intent2);//goes to second activity on click
     }
 }
 
