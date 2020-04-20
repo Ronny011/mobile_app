@@ -7,12 +7,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button share;
+    TextView name;
+    TextView phone;
     TextView battMessage;
     BroadcastReceiver battBroadcast;
     int pct;
@@ -22,8 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         share = findViewById(R.id.button);//button element
-        share.setOnClickListener(this);
         battMessage = findViewById(R.id.battBox);
+        name = findViewById(R.id.nameBox);
+        phone = findViewById(R.id.phoneBox);
+        share.setOnClickListener(this);
         battBroadcast = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -31,7 +37,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 battMessage.setText("Battery percentage " + String.valueOf(pct) + "%");
             }
         };
+        name.addTextChangedListener(watcher);
+        phone.addTextChangedListener(watcher);
     }
+    private TextWatcher watcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String nameChange = name.getText().toString();
+            String phoneChange = phone.getText().toString();
+            share.setEnabled(!phoneChange.isEmpty() && !nameChange.isEmpty());
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 
     @Override
     protected void onResume() {
@@ -47,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        //if (share.isDisabled());
         Intent share = new Intent(this, ShareActivity.class);
         share.putExtra("percentage", pct);
         startActivity(share);//goes to second activity on click
