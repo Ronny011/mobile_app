@@ -8,4 +8,5 @@
     <color name="edit">#E4E4E4</color>
     <color name="border">#A3A3A3</color>
     <color name="disabled">#4058AA89</color>
+    <color name="transparent">#00000000</color>
 </resources>
