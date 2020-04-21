@@ -50,9 +50,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(this, "onStart", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void finish()
+    {
+        super.finish();
+        Toast.makeText(this,"finish", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
         unregisterReceiver(battBroadcast);
+    }
+
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        Toast.makeText(this,"onStop", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        Toast.makeText(this,"onDestroy", Toast.LENGTH_LONG).show();
     }
 
     @Override
