@@ -12,7 +12,7 @@
         android:id="@+id/nameBox"
         android:layout_width="347dp"
         android:layout_height="55dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="125dp"
         android:layout_gravity="center_horizontal"
         android:autofillHints=""
         android:hint="@string/your_name"
@@ -23,7 +23,7 @@
         android:id="@+id/phoneBox"
         android:layout_width="347dp"
         android:layout_height="55dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="200dp"
         android:layout_gravity="center_horizontal"
         android:hint="@string/your_phone"
         android:inputType="phone"
@@ -34,7 +34,7 @@
         android:id="@+id/battBox"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="275dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/batt_per"
         android:textSize="30sp"
@@ -46,23 +46,11 @@
         android:layout_height="55dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="470dp"
-        android:background="@drawable/button_selector"
+        android:background="@drawable/sharebutton"
         android:radius="14dp"
         android:text="@string/button"
         android:textAllCaps="false"
         android:textColor="@color/colorShare"
         android:textSize="20sp"
-        android:enabled="false"
         />
-
-    <Button
-        android:id="@+id/trans_button"
-        android:layout_width="347dp"
-        android:layout_height="55dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="470dp"
-        android:background="@color/transparent"
-        android:enabled="true"
-        android:radius="14dp" />
-
 </FrameLayout>
