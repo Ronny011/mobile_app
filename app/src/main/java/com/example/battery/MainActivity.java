@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "onStart", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStop()
     {
         super.onStop();
-        Toast.makeText(this,"onStop", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"onStop", Toast.LENGTH_SHORT).show();
     }
 
     @Override
